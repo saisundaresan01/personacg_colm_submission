@@ -1,0 +1,67 @@
+{
+  "title": "PersonaCG Release Dataset v1",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "conversation_id",
+      "persona_code",
+      "persona_description",
+      "trait_adjectives",
+      "clickstream_summary",
+      "conversation"
+    ],
+    "properties": {
+      "conversation_id": {
+        "type": "string",
+        "description": "Stable public identifier for one generated conversation."
+      },
+      "persona_code": {
+        "type": "string",
+        "description": "One of the 32 SLOAN persona codes used for conditioning."
+      },
+      "persona_description": {
+        "type": "string",
+        "description": "Natural-language description of the assigned SLOAN persona."
+      },
+      "trait_adjectives": {
+        "type": "object",
+        "description": "Trait-level adjectives used to describe the assigned persona.",
+        "required": [
+          "Extraversion",
+          "Neuroticism",
+          "Conscientiousness",
+          "Agreeableness",
+          "Openness"
+        ],
+        "properties": {
+          "Extraversion": {
+            "type": "string"
+          },
+          "Neuroticism": {
+            "type": "string"
+          },
+          "Conscientiousness": {
+            "type": "string"
+          },
+          "Agreeableness": {
+            "type": "string"
+          },
+          "Openness": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "clickstream_summary": {
+        "type": "string",
+        "description": "Natural-language summary of the public clickstream evidence used to guide generation."
+      },
+      "conversation": {
+        "type": "string",
+        "description": "Generated e-commerce dialogue conditioned on the persona and clickstream summary."
+      }
+    },
+    "additionalProperties": false
+  }
+}
