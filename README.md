@@ -5,7 +5,7 @@ This repo contains a dataset created with the PersonaCG system: 1,024 synthetic 
 Files:
 
 - `personacg_release_dataset_v1.json`: the released dataset
-- `schema.json`: a minimal JSON schema for the dataset format
+- `schema.json`: a JSON schema for the dataset format
 
 Each row has:
 
